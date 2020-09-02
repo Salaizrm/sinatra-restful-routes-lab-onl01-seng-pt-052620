@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grandmas Cookies</title>
+<h1> Here is recipe number <%=@recipes.id%> </h1>
+</head>
+
+<body>
+
+  <%= @recipes.name %>
+  <%= @recipes.ingredients %>
+  <%= @recipes.cook_time %>
+  <br>
+
+  <form method= "POST" action="/recipes/<%=@recipes.id%>">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
+  </form>
+
+</body>
+
+</html>
